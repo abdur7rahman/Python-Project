@@ -1,18 +1,19 @@
-
+# Import necessary modules
 import pywhatkit as kit
 import datetime
 
-number = "+91 96299 00038" 
+# Replace with the recipient's phone number
+number = "**************"
 
+# Get the current date and time
 now = datetime.datetime.now()
 
-scheduled_time = datetime.datetime(now.year, now.month, now.day, 9, 26)
+# Set the scheduled time for the message (8:21 AM in this case)
+scheduled_time = datetime.datetime(now.year, now.month, now.day, 8, 21)
 
+# Calculate the delay in seconds until the scheduled time
 delay_seconds = (scheduled_time - now).seconds
 
-kit.sendwhatmsg (
-    number,
-    'Hello How Are U!',
-    now.hour,
-    now.minute + 1,
-    wait_time=delay_seconds)
+# Use pywhatkit to send a WhatsApp message with a delay
+# Message content: 'Happy Birthday!'
+kit.sendwhatmsg(number, 'Happy Birthday!', now.hour, now.minute + 1, wait_time=delay_seconds)
