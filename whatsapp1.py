@@ -2,7 +2,7 @@
 import pywhatkit as kit
 import datetime
 
-# Replace with the recipient's phone number
+# Replace with the recipient's phone number with Country Code
 number = "**************"
 
 # Get the current date and time
